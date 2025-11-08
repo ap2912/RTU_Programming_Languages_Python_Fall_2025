@@ -21,11 +21,12 @@ expression = input("Enter an arithmetic expression: ")
 operators = ['+', '-', '*', '/', '(', ')']
 
 # TODO: Initialize frequency dictionary
-operator_counts = {}
+operator_counts = {op: 0 for op in operators}
 
 # TODO: Count operator occurrences
 for char in expression:
-    pass  # check if char in operators, update counts
+    if char in operators:
+        operator_counts[char] += 1
 
 # TODO: Print results
 print("Operator counts:", operator_counts)
